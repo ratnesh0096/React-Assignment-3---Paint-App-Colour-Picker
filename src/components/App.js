@@ -27,15 +27,10 @@ const App = () => {
   let [nextBackground, selectNextBackground] = useState({ background: "" })
   const applyColor = (updateSelectionStyle) => {
     updateSelectionStyle(nextBackground)
-    // console.log("here");
   }
 
-  // const updateSelectionStyle=(nextBackground)=>{//
-  //   selectNextBackground(background);
-  // }
-
   return (
-    <div id="master"> 
+    <div id="master">
       <h5 className="heading">{title}</h5>
 
       <div className="row">
@@ -47,7 +42,7 @@ const App = () => {
       <div className='row' id="children-wrapper">
         {
           ["selection1", "selection2", "selection3"].map(key => (
-            <Selection key={key} applyColor={applyColor}/>
+            <Selection key={key} applyColor={applyColor} />
           ))
         }
       </div>
